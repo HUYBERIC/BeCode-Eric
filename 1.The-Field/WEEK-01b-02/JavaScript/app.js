@@ -1,3 +1,7 @@
+console.log("#####BEGIN OF JAVASCRIPT BASIS#####");
+
+console.log("");
+
 console.log("#####EXERCISE 06b.Practice.md#####");
 
         console.log("==TRIM");
@@ -51,8 +55,8 @@ console.log("#####EXERCISE 08.Practice.md#####");
 
         alert(`Welcome ${name}, you are ${age} y.o and you live in ${city}`);*/
 
-        /*console.log("==VAT EXERCISE");
-        let firstPrice = parseFloat(prompt("What's the price without VAT?"));
+        console.log("==VAT EXERCISE");
+        /*let firstPrice = parseFloat(prompt("What's the price without VAT?"));
         let vat = firstPrice * 0.21;
         let lastPrice = Math.round(firstPrice + vat);
 
@@ -137,7 +141,7 @@ console.log("#####EXERCISE 11b.Exercise.md#####");
                 }*/
 
                 console.log("__KEYLESS CAR?");
-                /*const mystery = "P777777"; //Start with a "P", more than 5 characters, contain à "7"  
+                /*const mystery = "P777777"; //Start with a "P", more than 5 characters, contain a "7"  
                 //CHANGE THIS VALUE TO MAKE THE CONDITIONAL BELOW TRUE
 
                 // LEAVE THIS CODE ALONE! (pretty please)
@@ -380,14 +384,14 @@ console.log("#####EXERCISE 20.EXERCISE-forOf/forIn.md#####");
 
         while (true) {
                 let command = prompt("Type :\n'New' to add a new task.\n'List' to see all the todo list.\n'Delete' to delete a task.\n'Quit' to leave this box.");
-                if (command === "Quit"){
+                if (command.toLowerCase() === "quit"){
                         console.log("Bye!");
                         break;
-                } else if (command === "New"){
+                } else if (command.toLowerCase() === "new"){
                         let newTask = prompt("What's your new task?")
                         todoList.push(newTask);
-                        console.log("The task "+ newTask +" has been add to the list.")
-                } else if (command === "List"){
+                        console.log("The task "+ /"newTask/"" +" has been add to the list.")
+                } else if (command.toLowerCase() === "list"){
                         console.log("**********TODO LIST**********")
                         if (todoList.length === 0){
                                 console.log("Nothing in your list.");
@@ -396,7 +400,7 @@ console.log("#####EXERCISE 20.EXERCISE-forOf/forIn.md#####");
                                         console.log(`${i + 1}. ${todoList[i]}`);
                                 }
                         }
-                } else if (command === "Delete"){
+                } else if (command.toLowerCase() === "delete"){
                         let indexOfTask = prompt("Write the number of the task you want to delete :");
                         indexOfTask = parsInt(indexOfTask) - 1;
                                 if (indexOfTask >=0 && indexOfTask < todoList.lenght){
@@ -428,14 +432,14 @@ console.log("#####EXERCISE 21a.Functions.md#####");
 console.log("");
 
 console.log("#####EXERCISE 21b.EXERCISE-FUNCTIONS.md#####");
-        console.log("==DICE FUNCTION");
-        /*function manyDice(faces, times){
+        /*console.log("==DICE FUNCTION");
+        function manyDices(faces, times){
                         for(let i = 0; i < times; i++){
                                 let result = Math.floor((Math.random() * faces) + 1);
                                 console.log("Number " + (i+1) + " --> " + result);
                         }
                 }
-                manyDice(6, 5);*/
+                manyDices(4, 3);*/
 
         console.log("==REPEAT");
         /*function repeatString(string, times){
@@ -447,7 +451,7 @@ console.log("#####EXERCISE 21b.EXERCISE-FUNCTIONS.md#####");
                         console.log(result);
                 }
 
-                repeatString("cou", 2);*/
+                repeatString("hélico", 2);*/
 
         console.log("==FULLNAME");
         /*function greet(firstName, lastName){
@@ -491,10 +495,10 @@ console.log("#####EXERCISE 21b.EXERCISE-FUNCTIONS.md#####");
                         }
                 }
                 }
-                let temp = isShortWeather(24);
+                let temp = isShortWeather(37);
                 console.log(temp);*/
 
-        console.log("==LAST ELEMENT-EXERCISE"); //Need help et d'explications pour "arr"
+        console.log("==LAST ELEMENT-EXERCISE"); // (arr) = arg pour Array?
         /*function lastElement (arr){
                 if (arr.length === 0) {
                         return null;
@@ -523,8 +527,8 @@ console.log("#####EXERCISE 21b.EXERCISE-FUNCTIONS.md#####");
         let result = capitalize("coucou");
         console.log(result);*/
         
-        console.log("==SUMARRAY-EXERCISE");
-        function sumArray(numbers){
+        console.log("==SUMARRAY-EXERCISE"); //(numbers) = array?
+        /*function sumArray(numbers){
                 let sum = 0;
                 for (let i = 0; i < numbers.length; i++){
                         sum += numbers[i];
@@ -533,4 +537,100 @@ console.log("#####EXERCISE 21b.EXERCISE-FUNCTIONS.md#####");
         }
         console.log(sumArray([1, 2, 3])); // 6
         console.log(sumArray([2, 2, 2, 2])); // 8
-        console.log(sumArray([50, 50, 1])); // 101
+        console.log(sumArray([50, 50, 1])); // 101*/
+        
+        console.log("==RETURNDAY-EXERCISE");
+        /*//FIRST METHOD
+        function returnDay (number){
+                if (number < 1 || number > 7 || isNaN(number)) {
+                        return null;
+                } else {
+                        if (number === 1) {
+                                return "Monday";
+                        } else if (number === 2){
+                                return "Tuesday";
+                        } else if (number === 3){
+                                return "Wednesday";
+                        } else if (number === 4){
+                                return "Thursday";
+                        } else if (number === 5){
+                                return "Friday";
+                        } else if (number === 6){
+                                return "Saturday";
+                        } else if (number === 7){
+                                return "Sunday";
+                        }
+                        }
+                        }
+        let dayWeek = returnDay(3);
+        console.log(dayWeek);*/
+
+        //SECOND METHOD WITH ARRAY
+        /*const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+        function returnDay(number) {
+                if (number < 1 || number > 7 || isNaN(number)) {
+                return console.log(null);
+                } else {
+                return console.log(days[number - 1]);
+                }
+                }
+                returnDay(1);*/
+
+console.log("");
+
+console.log("#####EXERCISE 22.SCOPE.md#####");
+        console.log("==FIRST TRY"); 
+        /*const i = "Hello World"; //Deux fois la même variable mais deux scopes différents
+
+        for (let i = 0; i < 5; i++) {
+                console.log(i);
+        }
+
+        console.log(i);*/
+console.log("");
+
+console.log("#####EXERCISE 23.FunctionExpressionsHigherOrder.md#####");
+        console.log("==DICE FUNCTION"); // à vérifier
+        /*const callTwice = function (func) {
+                func();
+                func();
+        };
+              // Here, the callTwice function takes another function as a parameter and call it two times
+
+        const rollDie = function () {
+                const roll = Math.floor(Math.random() * 6 + 1);
+                console.log(roll);
+        };
+        
+        callTwice(rollDie);
+
+        const newFunc = function (func, times){
+                for (let i=0; i < times ; i++){
+                        func();
+                }
+        }
+        newFunc(rollDie, 3);*/
+
+console.log("");
+
+console.log("#####EXERCISE 24.METHODS.md#####");
+        console.log("==FirstMethodsExercise");
+        /*const user = {
+                firstName: "Eric",
+                lastName: "Huybrechts",
+                age: 56,
+                printAge: function (){
+                        console.log(`${this.firstName} ${this.lastName} is ${this.age} years old.` );
+                },
+                aYearHasPast: function (){
+                        this.age += 1;
+                }
+        }
+        user.printAge(); //Age de base
+        user.aYearHasPast(); //Faire +1 à l'âge (invisible)
+        user.printAge(); //Age augmenté de 1*/
+
+console.log("");
+
+console.log("#####END OF JAVASCRIPT BASIS#####");
+        
