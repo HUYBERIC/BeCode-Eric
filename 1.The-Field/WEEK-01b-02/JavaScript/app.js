@@ -498,7 +498,7 @@ console.log("#####EXERCISE 21b.EXERCISE-FUNCTIONS.md#####");
                 let temp = isShortWeather(37);
                 console.log(temp);*/
 
-        console.log("==LAST ELEMENT-EXERCISE"); // (arr) = arg pour Array?
+        console.log("==LAST ELEMENT-EXERCISE");
         /*function lastElement (arr){
                 if (arr.length === 0) {
                         return null;
@@ -527,7 +527,7 @@ console.log("#####EXERCISE 21b.EXERCISE-FUNCTIONS.md#####");
         let result = capitalize("coucou");
         console.log(result);*/
         
-        console.log("==SUMARRAY-EXERCISE"); //(numbers) = array?
+        console.log("==SUMARRAY-EXERCISE");
         /*function sumArray(numbers){
                 let sum = 0;
                 for (let i = 0; i < numbers.length; i++){
