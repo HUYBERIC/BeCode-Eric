@@ -85,17 +85,37 @@ returns a boolean indicating if the provided text is a palindrome or not.
 Notes :
 - You should be able to to ignore all special characters, spaces, dots, periods, etc. and be case insensitive */
 
-/* function isPalindrome (text){
+function isPalindrome (text){
 let cleanText = text.replace(/[^a-zA-Z]/g, "").toLowerCase();
 let reverseText = cleanText.split('').reverse().join('');
-return cleantText === reverseText;
+return cleanText === reverseText;
 }
-console.log(isPalindrome("hello")); */
+console.log(isPalindrome("hello"));
+
+// Without REGEX
+
+function isPalindromeBis (text){
+    text = text.toLowerCase();
+    const alpha = "abcdefghijklmnopqrstuvwxyz"
+    let cleanedText = "";
+    for (let characters of text){
+        if (alpha.includes(characters)){
+        cleanedText += characters;   
+        }
+    }
+
+    let reversedText = "";
+    for (i = cleanedText.length - 1; i >= 0 ; i--){
+        reversedText += cleanedText[i];
+    }
+    return cleanedText === reversedText;
+}
+console.log(isPalindromeBis("KAyAk"));
 
 console.log("");
 console.log("==03.exo");
 /* Caesar Cipher is a way of "encrypting" a text that, supposably, Julius Caesar used in his communication.
-We switch every letter with, for example, two letters before in the alphabet.
+We switch every letter with, for example, two letters before in the "alph"abet.
 The Caesar cipher function will take two parameters str and num;
 str represents the text we want to cipher and num de amount of letters you want to go forward or backward
 (using negative numbers)
