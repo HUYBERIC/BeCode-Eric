@@ -7,7 +7,6 @@ alert() => the user have ton read a pop-up (can't write).
 ## ==1. VARIABLES==
 var, let and const :
 * var affect the global scope
-* let is locally scoped
 * const is locally scoped and constant
 * we can use the same variable if they are not in the same scope (carefull with var...)
 
@@ -138,6 +137,28 @@ var.splice(): Adds, removes, or replaces elements in an array by modifying the o
 var.reverse(): Reverses the order of the elements in an array.
 var.sort(): Sorts the elements of an array in place, by default in ascending order.
 var.includes(): Checks if an array contains a specified value, returning true or false.
+
+**var.forEach():**
+const myArray = ["hello", "goodbye", "see you later"];
+myArray.forEach(function (element) {
+  console.log(element);
+});
+***Now, let's see :***
+"hello"
+"goodbye"
+"see you later"
+
+**var.map():**
+const firstArray = [1, 2, 3, 4, 5];
+const newArray = firstArray.map((element) => {
+  return element * 5;
+});
+***Now, let's see :***
+console.log(firstArray);
+console.log(newArray);
+***Return***
+[1,2,3,4,5]
+[5,10,15,20,25]
 * Reference type
 > An example is better than 1000 words.
 
@@ -281,11 +302,62 @@ while (num < 10) {
 }
 
 The break line cut the loop. We can cut many loops in a big loop!
-#### ***FOR IN***
+
 #### ***FOR OF***
+> Easy way to access a value of an array or an object so :
+
+const colors = ["red", "orange", "blue", "violet"];
+**For loop example**
+for (let i = 0; i < colors.length; i++) {
+  console.log(colors[i]);
+}
+**For... of example**
+for (let item of colors) {
+  console.log(item);
+}
+**For both, the result will be**
+"red"
+"orange"
+"blue"
+"violet"
+
+#### ***FOR IN***
+> For...of works only for iterables values. Objects are not iterable because they don't have an order.
+A solution is to use for...in which has a similar syntax and returns the keys of an object. So :
+
+const user = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  hobbies: ["football", "movies", "guitar"],
+};
+for (***let*** *key* ***in*** *user*) {
+  console.log(key);
+}
+**Result :**
+firstName
+lastName
+age
+hobbies
+
+***So we can easily access the values like this :***
+for (let key in user) {
+  console.log(`${key} : ${user[key]}`);
+}
+// Result :
+firstName : John
+lastName : Doe
+age : 30
+hobbies : ["football", "movies", "guitar"]
+
 ## ==5. FUNCTIONS==
-## ==6. ARRAY METHODS (continuation)==
-#### ***METHODS WITH CALLBACKS***
-## ==7. THE KEYWORD "THIS"==
-## ==8. SPREAD OPERATORS==
-## ==9. DESTRUCTURING==
+>Functions are reusable chunks of code that we wrap up and give it a name.
+
+function myFunction() {
+  // Whatever code we want here
+  return; // What the whole code returns
+}
+
+## ==6. THE KEYWORD "THIS"==
+## ==7. SPREAD OPERATORS==
+## ==8. DESTRUCTURING==
