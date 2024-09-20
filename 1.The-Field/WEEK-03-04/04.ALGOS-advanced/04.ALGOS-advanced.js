@@ -112,6 +112,28 @@ function isPalindromeBis (text){
 }
 console.log(isPalindromeBis("KAyAk"));
 
+// Henrique version
+
+const isPalindromeAgain = (str) => {
+    const alphaBis = "abcdefghijklmnopqrstuvwxyz".split("");
+    let arrBis = str.trim().toLowerCase().split("");
+    
+    arrBis = arrBis.filter((el) => {
+        return alphaBis.includes(el);
+    });
+    
+    const arrTestBis = [...arrBis].reverse();
+    
+    for (let i = 0; i < arrBis.length; i++){
+        if (arrBis[i] !== arrTestBis[i]){
+            return false;
+        }
+    }
+    return true;
+};
+console.log(isPalindromeAgain("Madam, I'm Adam"));
+
+
 console.log("");
 console.log("==03.exo");
 /* Caesar Cipher is a way of "encrypting" a text that, supposably, Julius Caesar used in his communication.
