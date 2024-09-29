@@ -85,7 +85,7 @@ returns a boolean indicating if the provided text is a palindrome or not.
 Notes :
 - You should be able to to ignore all special characters, spaces, dots, periods, etc. and be case insensitive */
 
-function isPalindrome (text){
+/* function isPalindrome (text){
 let cleanText = text.replace(/[^a-zA-Z]/g, "").toLowerCase();
 let reverseText = cleanText.split('').reverse().join('');
 return cleanText === reverseText;
@@ -131,7 +131,7 @@ const isPalindromeAgain = (str) => {
     }
     return true;
 };
-console.log(isPalindromeAgain("Madam, I'm Adam"));
+console.log(isPalindromeAgain("Madam, I'm Adam")); */
 
 
 console.log("");
@@ -244,17 +244,18 @@ Notes :
 - Any number in the array can be used in multiple pairs (look at the "4" in the exemple below) */
 
 /* function sumArray (numArray, sum){
+    ket newNumArray = [...new Set (numArray)]
     let result = [];
-    for (let i = 0; i < numArray.length; i++){
-        for (let j = i + 1; j <numArray.length; j++){
-            if (numArray[i] + numArray[j] === sum){
-                result.push([numArray[i],numArray[j]]);
+    for (let i = 0; i < newNumArray.length; i++){
+        for (let j = i + 1; j <newNumArray.length; j++){
+            if (newNumArray[i] + newNumArray[j] === sum){
+                result.push([newNumArray[i],newNumArray[j]]);
             }
         }
     }
     return result;
-}
-console.log(sumArray([1, 2, 8, 13, 12, 9], 14));  */
+} */
+console.log(sumArray([1, 2, 8, 13, 12, 9], 14)); 
 
 console.log("");
 console.log("==07.exo");

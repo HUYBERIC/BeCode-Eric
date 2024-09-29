@@ -1,0 +1,35 @@
+body {
+    background-color: hsl(39°,6%,83%);
+}
+
+h1 {
+    color: rgb(12, 37, 134);
+}
+
+h1 span {
+    color: #d69e36;
+}
+
+.menu > li > a  {
+    color: rgb(134, 12, 110);
+}
+
+ul span {
+    color: red;
+}
+
+[data-role="dropdown"] ul{
+    background-color: hsl(39, 21%, 73%);
+}
+
+[data-role="dropdown"] span {
+    color: rgb(14, 86, 96);
+}
+
+[data-role="dropdown"] li:nth-child(2) { /*No pseudo selectors??*/
+    background-color: purple;
+}
+
+.content * {
+    color: cyan;
+}

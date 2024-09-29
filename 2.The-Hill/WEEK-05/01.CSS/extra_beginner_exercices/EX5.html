@@ -1,0 +1,67 @@
+<!-- Please create a simple checkerboard pattern by making the even squares black and the odd squares red. Your result should look like the image below. Please write your styles inside the space I provided, and do not change any other style :)
+
+Please note: the solution needs to select both the even and odd squares, changing the background color of the entire board will work visually, but will not pass the exercise parameters. 
+Voir exercice pour avoir le visuel-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <title>Checkerboard</title>
+    <style>
+      /* DON'T TOUCH THIS CSS */
+        .square {
+        width: 100px;
+        height: 100px;
+        box-sizing: border-box;
+        border: 1px solid black;
+        }
+        #board {
+        display: flex;
+        margin: 0 auto;
+        width: 500px;
+        flex-wrap: wrap;
+        } 
+
+      /* YOUR CODE HERE */
+            .square:nth-child(odd) {
+                background-color: red;
+            }
+
+            .square:nth-child(even) {
+                background-color: black;
+            }
+      /* END OF YOUR CODE */
+    </style>
+    </head>
+
+    <body>
+    <div id="board">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+    </body>
+</html>
