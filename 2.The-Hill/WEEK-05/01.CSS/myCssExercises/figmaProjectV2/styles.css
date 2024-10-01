@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+ background-color: #2D4480;
+ display: flex;
+ justify-content: center;
+ height: 100vh;
+ align-items: center;
+}
+
+.container {
+    display: fleex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    text-transform: uppercase;
+    width: 18rem;
+    height: 28.125rem;
+    border-radius: 1.6875rem;4;
+    align-items: center;
+    overflow: hidden;
+
+}
