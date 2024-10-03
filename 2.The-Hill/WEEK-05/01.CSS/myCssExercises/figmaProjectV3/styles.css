@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* GENERAL */
+.header {
+    background-color: #3A3D46;
+}
+
+.header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.above {
+    background-color: #242628;
+}
+
+.above .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    }
+
+.bottom .container {
+    padding:40px 20px;
+    margin-top: 40px;
+    margin-bottom: auto;
+    max-width: 1200px;
+    }
+
+/* HEADER */
+
+.image {
+    display: flex;
+    flex-direction: row;
+    background-repeat: no-repeat;
+    margin-left: 50px;
+    align-items: center;
+}
+
+.image img {
+    width: 60px;
+    animation: turn 120s linear infinite;
+}
+
+@keyframes turn {
+    from{
+        transform: rotat(0deg)
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.image p {
+    font-family: "Raleway", sans-serif;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #a4f5b4;
+    font-size: 30px;
+    margin-left: 10px;
+    text-shadow: 0 8px 10px rgba(0, 0, 0, 0.671);
+}
+
+.image p:hover{
+    transform: scale(1.10);
+    cursor: pointer;
+}
+
+.banner {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 5.5%;
+    color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    align-items: center;
+    gap: 30px;
+    margin-right: 50px;
+    justify-content: flex-end;
+}
+
+.home {
+    background-color: #a4f5b4;
+    padding: 10px;
+    border-radius: 10%;
+    color: black;
+}
+
+.banner p:hover{
+    transform: scale(1.20);
+    cursor: pointer;
+}
+
+.banner .home {
+    transform: scale(1.10);
+    cursor: pointer;
+}
+
+/* ABOVE */
+
+.prems{
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+    font-family: "Raleway", sans-serif;
+    gap: 20px;
+    max-width: 600px;
+    padding: 80px;
+}
+
+.prems h1 {
+    color: #a4f5b4;
+    text-align: center;
+    font-size: 55px;
+    text-transform: uppercase;
+    
+}
+
+span {
+    color: white;
+}
+
+.prems h2 {
+    color: rgb(146, 144, 144);
+    text-align: center;
+}
+
+.prems hr {
+    border: none;
+    height: 4px;
+    background-color: #a4f5b4a7;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+p.txt {
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 2%;
+    line-height: 20.88px;
+}
+
+p.more {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20.88px;
+    background-color: #a4f5b4;
+    border-radius:25px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 0;
+    align-self: flex-start;
+}
+
+p.more:hover{
+    transform: scale(1.20);
+    cursor: pointer;
+}
+
+.dems{
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    padding: 40px;
+}
+
+/* BOTTOM */ 
+
+.photosTxt {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36.54px;
+    letter-spacing: 2%;
+}
+
+.bottom hr {
+    border: none;
+    height: 2px;
+    max-width: 470px;
+    background-color: #000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-left: 115px;
+    margin-bottom: 20px;
+}
+
+.gridBottom {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.pic {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pic img{
+    width:100%;
+    height: auto;
+    display: block;
+}
+
+.pic img:hover{
+    transform: scale(1.10);
+}
+
+.pic.first {
+    margin-bottom: auto;
+    margin-top: auto;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.pic.second {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.pic.third {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.pic.fourth {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.pic.fivth {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
