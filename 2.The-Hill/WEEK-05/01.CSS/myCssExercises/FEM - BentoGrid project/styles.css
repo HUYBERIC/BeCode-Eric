@@ -1,0 +1,237 @@
+/* IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* RESET */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL SETTINGS (container, item, text, ...) */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(210, 249, 171);
+}
+
+.grid{
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    max-width: 90vw;
+    min-width: 375px;
+    max-height: 90vh;
+    margin: 0 auto;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 25px; 
+    grid-template-areas: 
+    "item1 item2 item2 item3"
+    "item1 item2 item2 item3"
+    "item1 item2 item2 item3"
+    "item1 item2 item2 item3"
+    "item1 item5 item6 item3"
+    "item4 item5 item6 item3"
+    "item4 item5 item6 item3"
+    "item4 item7 item8 item8"
+    "item4 item7 item8 item8"
+    "item4  item7 item8 item8";
+}
+
+.item {
+    align-items: center;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 18px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* ITEM 1 */
+
+.item1 { 
+    grid-area: item1; 
+    background-color: #faeee2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item1 p{
+    font-family: "DM Sans", "Roboto", "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    margin-bottom:40px;
+    line-height: 35px;
+}
+
+.item1 span{
+    font-style: italic;
+    color:#7651dc;
+    font-weight: 500;
+}
+
+.item1 img {
+    width:95%;
+}
+
+/* ITEM 2 */
+
+.item2 { 
+    grid-area: item2;
+    background-color: #7651dc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.item2 p{
+    color: #ffffff;
+    font-family: "DM Sans", "Roboto", "Raleway", sans-serif;
+    text-align: center;
+}
+
+.item2 p:first-child {
+    font-weight: 400;
+    font-size: 70px;
+    margin-bottom:40px;
+    line-height: 60px;
+    margin : auto;
+}
+
+.item span:first-child{
+    color: #fdc962;
+    font-weight: 500;
+}
+
+.item span:last-child{
+font-style: italic;
+}
+
+.item2 img {
+    max-width:35%;
+    text-align: center;
+}
+
+.item2 p:last-child {
+    font-weight: 200;
+    font-size: 20px;
+    margin-bottom: auto;
+}
+
+/* ITEM 3 */
+
+.item3 { 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-area: item3;
+    background-color: #dcd1fc;
+    overflow: hidden;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.item3 p{
+    color: #000;
+    font-family: "DM Sans", "Roboto", "Raleway", sans-serif;
+    text-align: left;
+}
+
+.item3 p:first-child{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 0.8;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.item3 img {
+    width: 160%;
+    height: auto;
+    margin-top: 10px; 
+}
+
+.item3 p:last-child {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-top: 10px;
+    max-width: 90%;
+}
+
+/* ITEM 4 */
+
+.item4 { 
+    grid-area: item4;
+    background-color: #ffcc69; 
+}
+
+/* ITEM 5 */
+
+.item5 { 
+    grid-area: item5;
+    background-color: #ffffff;
+}
+
+/* ITEM 6 */
+
+.item6 { 
+    grid-area: item6;
+    background-color: #ffcc69;
+}
+
+/* ITEM 7 */
+
+.item7 { 
+    grid-area: item7;
+    background-color: #ffffff;
+}
+
+/* ITEM 8 */
+
+.item8 { 
+    grid-area: item8;
+    background-color: #7651dc;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 375px) {
+    .grid {
+        grid-template-columns: 1fr; /* 1 colonne pour les petits écrans */
+        grid-template-areas: 
+            "item1"
+            "item2"
+            "item3"
+            "item4"
+            "item5"
+            "item6"
+            "item7"
+            "item8";
+    }
+
+    .item {
+        padding: 10px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}

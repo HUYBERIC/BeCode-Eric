@@ -1,0 +1,54 @@
+/* IMPORT */
+
+
+/* RESET */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL SETTINGS (container, item, text, ...) */
+.container{
+    max-width: 1440px;
+    min-width: 375px;
+    max-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: auto auto auto auto; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "item1 item2 item2 item3"
+    "item1 item2 item2 item3"
+    "item4 item5 item6 item3"
+    "item4 item7 item8 item8"; 
+}
+
+.item {
+    border: solid 1px black;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* ITEM */
+
+.item1 { 
+    grid-area: item1; 
+}
+
+.item2 { grid-area: item2; }
+
+.item3 { grid-area: item3; }
+
+.item4 { grid-area: item4; }
+
+.item5 { grid-area: item5; }
+
+.item6 { grid-area: item6; }
+
+.item7 { grid-area: item7; }
+
+.item8 { grid-area: item8; }
