@@ -1,0 +1,82 @@
+/* IMPORT */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1110px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+/*//////////*/
+
+@media (max-width: 767px) {
+    body{
+        background-color: gold;
+    }
+    h1{
+        display: none;
+    }
+    .b, .c, .d, .e {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    body{
+        background-color: pink;
+    }
+    h1{
+        display: none;
+    }
+    .a, .c, .d, .e {
+        display: none;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+    body{
+        background-color: chocolate;
+    }
+    h1{
+        display: none;
+    }
+    .a, .b, .d, .e {
+        display: none;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+    body{
+        background-color: cadetblue;
+    }
+    h1{
+        display: none;
+    }
+    .a, .b, .c, .e {
+        display: none;
+    }
+}
+
+@media (min-width: 1920px){
+    body{
+        background-color: cornflowerblue;
+    }
+    h1{
+        display: none;
+    }
+    .a, .b, .c, .d {
+        display: none;
+    }
+}

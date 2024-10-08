@@ -1,0 +1,69 @@
+/* IMPORT */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1110px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+/*//////////*/
+
+div{
+    width: 100%;
+    height: 100px;
+}
+
+.flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.first {
+    background-color: green;
+}
+
+.second {
+    background-color: blue;
+}
+
+.third {
+    background-color: violet;
+}
+
+.fourth {
+    background-color: red;
+}
+
+.fivth {
+    background-color: lightgrey;
+}
+
+.sixth {
+    background-color: greenyellow;
+}
+
+
+@media (min-width: 768px){
+    .flex {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px){
+    .flex {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
