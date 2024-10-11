@@ -1,0 +1,105 @@
+$rotationR : rotationR 45s linear infinite;
+@keyframes rotationR {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+$rotationL : rotationL 45s linear infinite;
+@keyframes rotationL {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+$shakingLR : shakingLR 4s infinite;
+@keyframes shakingLR {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-1px);
+    }
+    50% {
+        transform: translateX(1px);
+    }
+    75% {
+        transform: translateX(-1px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+$shakingTB : shakingTB 1s infinite;
+@keyframes shakingTB {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-1px);
+    }
+    50% {
+        transform: translateY(1px);
+    }
+    75% {
+        transform: translateY(-1px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+$zoomCircle : zoomCircle 4s infinite ease-in-out;
+@keyframes zoomCircle{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+    }
+
+$zoomSquare : zoomSquare 6s infinite ease-in-out;
+@keyframes zoomSquare{
+    0% {
+        transform: scale(1) rotate(28deg);
+    }
+    50% {
+        transform: scale(0) rotate(28deg);
+    }
+    100% {
+        transform: scale(1) rotate(28deg);
+    }
+    }
+
+$scaling : scaling infinite 20s;
+@keyframes scaling {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.2);
+    }
+    40% {
+        transform: scale(1.2);
+    }
+    60% {
+        transform: scale(0.8);
+    }
+    80% {
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
