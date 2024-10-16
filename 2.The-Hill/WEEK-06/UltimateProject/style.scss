@@ -45,7 +45,7 @@ header{
     nav {
         font-size: .875rem;
         font-family: "Barlow";
-        font-size: 400;
+        font-weight: 400;
         z-index: 1;
         ul{
             display: flex;
@@ -68,7 +68,7 @@ header{
     &::after {
         content: "";
         position:absolute;
-        background-image: url('../img/deco1.png');
+        background-image: url('img/deco1.png');
         background-size: cover;
         width: 730px;
         height: 747px;
@@ -139,7 +139,7 @@ header{
     &::after{
         content:"";
         position: absolute;
-        background-image: url('../img/deco2.png');
+        background-image: url('img/deco2.png');
         background-size: contain;
         height: 181px;
         width: 184px;
@@ -150,7 +150,7 @@ header{
     &::before{
         content:"";
         position: absolute;
-        background-image: url('../img/deco3.png');
+        background-image: url('img/deco3.png');
         background-size: contain;
         height: 153px;
         width: 142px;
@@ -301,7 +301,7 @@ header{
             &::before{
                 content:"";
                 position: absolute;
-                background-image: url('../img/deco3.png');
+                background-image: url('img/deco3.png');
                 background-size: contain;
                 height: 153px;
                 width: 142px;
@@ -459,7 +459,7 @@ footer{
             display:none;
         }  
         h1 {
-            font-size: 1.5rem; // Réduire la taille du titre
+            font-size: 1.5rem;
             text-align: center;
         }
         #toggle {

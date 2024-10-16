@@ -178,7 +178,7 @@ header {
 .head nav {
   font-size: 0.875rem;
   font-family: "Barlow";
-  font-size: 400;
+  font-weight: 400;
   z-index: 1;
 }
 .head nav ul {
@@ -201,7 +201,7 @@ header {
 .head::after {
   content: "";
   position: absolute;
-  background-image: url("../img/deco1.png");
+  background-image: url("img/deco1.png");
   background-size: cover;
   width: 730px;
   height: 747px;
@@ -278,7 +278,7 @@ header {
 .heroCol::after {
   content: "";
   position: absolute;
-  background-image: url("../img/deco2.png");
+  background-image: url("img/deco2.png");
   background-size: contain;
   height: 181px;
   width: 184px;
@@ -289,7 +289,7 @@ header {
 .heroCol::before {
   content: "";
   position: absolute;
-  background-image: url("../img/deco3.png");
+  background-image: url("img/deco3.png");
   background-size: contain;
   height: 153px;
   width: 142px;
@@ -447,7 +447,7 @@ header {
 .grid6 .text h2::before {
   content: "";
   position: absolute;
-  background-image: url("../img/deco3.png");
+  background-image: url("img/deco3.png");
   background-size: contain;
   height: 153px;
   width: 142px;

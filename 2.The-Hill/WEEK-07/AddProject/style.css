@@ -1,0 +1,787 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+button, input, select {
+  margin: 0;
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#root {
+  isolation: isolate;
+}
+
+header {
+  font-family: "Commissioner";
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: left;
+}
+header .container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 45px 0;
+  background-color: #fff;
+  z-index: 2;
+}
+header .container #toggle {
+  display: none;
+}
+header .container #toggle:checked ~ nav {
+  top: 72.5px;
+  opacity: 1;
+}
+header .container #toggle:checked ~ .hamburger span {
+  transform: rotate(45deg);
+}
+header .container #toggle:checked ~ .hamburger span:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+header .container #toggle:checked ~ .hamburger span:after {
+  display: none;
+}
+header .container .hamburger {
+  display: inline-flex;
+  height: 30px;
+  width: 30px;
+  z-index: 2;
+  place-items: center;
+  z-index: 2;
+}
+header .container .hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #000;
+  position: relative;
+}
+header .container .hamburger span:after, header .container .hamburger span:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #000;
+}
+header .container .hamburger span:before {
+  top: -7px;
+}
+header .container .hamburger span:after {
+  bottom: -7px;
+}
+header .container nav {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 100%;
+  opacity: 0;
+  width: 67%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(25, 25, 33);
+  color: #fff;
+  transition: 0.2s ease;
+  z-index: 1;
+}
+header .container nav ul {
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+header .container nav ul li.home, header .container nav ul li.projects {
+  margin: 26.4px 0;
+}
+header .container nav ul li.call {
+  font-family: "Commissioner";
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 19.57px;
+  text-align: left;
+  text-align: center;
+  background-color: rgb(249, 79, 79);
+  padding: 22.22px 11.92vw;
+}
+
+@media (min-width: 768px) {
+  header .container {
+    padding: 0;
+    margin: 0;
+  }
+  header .container .logo {
+    padding-left: 45px;
+  }
+  header .container #toggle, header .container .hamburger {
+    display: none;
+  }
+  header .container nav {
+    font-family: "Commissioner";
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 2rem;
+    text-align: left;
+    opacity: 1;
+    position: relative;
+    right: auto;
+    top: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(249, 79, 79);
+    width: 57.033vw;
+    max-width: 438px;
+    max-height: 178px;
+    padding: 0;
+  }
+  header .container nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 57px 0 57px 10px;
+    padding: 0;
+  }
+  header .container nav ul li {
+    margin: 0;
+    padding: 0 10px;
+  }
+  header .container nav ul li.call {
+    font-family: "Commissioner";
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 19.57px;
+    text-align: left;
+    font-size: 1rem;
+    background-color: rgb(25, 25, 33);
+    padding: 22.5px 19px;
+    margin-left: 10px;
+    margin-right: 20px;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  header .container .logo {
+    padding-left: 11vw;
+  }
+  header .container nav {
+    font-family: "Commissioner";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem;
+    text-align: left;
+    width: 49vw;
+    max-width: 705px;
+    max-height: 178px;
+  }
+  header .container nav ul {
+    justify-content: space-between;
+    margin-left: 0;
+    margin-right: 8.3vw;
+    margin: 57px 11vw 57px 10px;
+  }
+  header .container nav ul li.home, header .container nav ul li.projects {
+    margin: 1.5%;
+  }
+  header .container nav ul li.call {
+    font-family: "Commissioner";
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 19.57px;
+    text-align: left;
+    font-size: 1rem;
+    background-color: rgb(25, 25, 33);
+    padding: 22.22px 44.7px;
+    margin-left: 6.4%;
+    margin-right: 0;
+  }
+}
+.first-section .container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.first-section .container .first-img img {
+  width: 100vw;
+  max-height: 53vw;
+  object-fit: cover;
+  object-position: 0px -20px;
+}
+.first-section .container .first-text {
+  padding: 0 24px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.first-section .container .first-text h1 {
+  font-family: "Commissioner";
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 2.5rem;
+  text-align: left;
+}
+.first-section .container .first-text p {
+  font-family: "Commissioner";
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  text-align: left;
+  margin-top: 30px;
+}
+.first-section .container span {
+  align-self: flex-start;
+  font-family: "Commissioner";
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 19.57px;
+  text-align: left;
+  font-size: 1.125rem;
+  line-height: 22.01px;
+  padding: 25px 40px;
+  margin-left: 24px;
+  background-color: rgb(249, 79, 79);
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .first-section .container {
+    display: grid;
+    grid-template-columns: 1fr 57.033vw;
+    grid-template-rows: auto;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+  }
+  .first-section .container .first-img {
+    position: relative;
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .first-section .container .first-img img {
+    max-height: 100%;
+    width: 100%;
+    height: 78.9vw;
+    object-fit: cover;
+    object-position: -330px 0px;
+    right: 100px;
+    z-index: -1;
+  }
+  .first-section .container .first-img .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 50%);
+    z-index: 0;
+  }
+  .first-section .container .first-text-button {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    max-width: 50vw;
+    margin-top: -120px;
+    position: relative;
+    margin-left: 45px;
+    padding: 0;
+    z-index: 3;
+  }
+  .first-section .container .first-text-button .first-text {
+    z-index: 2;
+    padding: 0;
+  }
+  .first-section .container .first-text-button .first-text h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+  .first-section .container .first-text-button .first-text p {
+    margin: 30px 0;
+  }
+  .first-section .container span {
+    display: inline-block;
+    position: relative;
+    justify-self: start;
+    margin-top: -10px;
+    margin-left: 0;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .first-section .container {
+    grid-template-columns: 1fr 62.15vw;
+  }
+  .first-section .container .first-img img {
+    height: 55.5vw;
+    object-position: -210px 0px;
+  }
+  .first-section .container .first-text-button {
+    padding-left: 7.5vw;
+    max-height: 55.5vw;
+  }
+  .first-section .container .first-text-button .first-text h1 {
+    font-family: "Commissioner";
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 5.5rem;
+    text-align: left;
+  }
+  .first-section .container .first-text-button .first-text p {
+    font-family: "Commissioner";
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 2rem;
+    text-align: left;
+    margin: 50px 0;
+    max-width: 540px;
+  }
+}
+.second-section .container {
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto;
+  margin-top: 100px;
+  overflow: hidden;
+}
+.second-section .container .second-image {
+  grid-row: 1/2;
+  align-self: start;
+  width: 115%;
+}
+.second-section .container .second-image img {
+  max-height: 53vw;
+  width: 100%;
+  object-fit: cover;
+  object-position: -20px -50px;
+}
+.second-section .container .text-pt1 {
+  grid-row: 2/3;
+  background-color: rgb(25, 25, 33);
+  color: #fff;
+  padding: 80px 25px;
+  position: relative;
+}
+.second-section .container .text-pt1 h1 {
+  font-family: "Commissioner";
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 2.5rem;
+  text-align: left;
+  font-size: 2rem;
+  white-space: nowrap;
+  position: relative;
+}
+.second-section .container .text-pt1 h1 span {
+  color: rgb(249, 79, 79);
+}
+.second-section .container .text-pt1 h1::before {
+  position: absolute;
+  content: "";
+  background-image: url(img/~.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  top: -90px;
+}
+.second-section .container .text-pt1 p {
+  font-family: "Commissioner";
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  text-align: left;
+  margin: 30px 0;
+}
+.second-section .container .text-pt1 .red-span {
+  font-family: "Commissioner";
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 19.57px;
+  text-align: left;
+  line-height: 18.35px;
+  font-size: 1rem;
+  color: rgb(249, 79, 79);
+  position: relative;
+}
+.second-section .container .text-pt1 .red-span::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: rgb(249, 79, 79);
+  bottom: -9px;
+  left: 0;
+}
+.second-section .container .head-title-out {
+  display: none;
+}
+.second-section .container .text-pt2 {
+  grid-row: 3/4;
+  background-color: rgb(249, 79, 79);
+  color: #fff;
+  padding: 96px 24px;
+  position: relative;
+}
+.second-section .container .text-pt2 h1 {
+  font-family: "Commissioner";
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 2.5rem;
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 87px;
+}
+.second-section .container .text-pt2 .first-block-text, .second-section .container .text-pt2 .second-bloc-text {
+  margin: 87px 0;
+}
+.second-section .container .text-pt2 .bloc {
+  font-family: "Commissioner";
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  text-align: left;
+  margin-left: 16px;
+}
+.second-section .container .text-pt2 .bloc h2 {
+  font-weight: 800;
+  margin-bottom: 40px;
+  z-index: 2;
+}
+.second-section .container .text-pt2 .first-bloc-text {
+  position: relative;
+}
+.second-section .container .text-pt2 .first-bloc-text h2 {
+  position: relative;
+  z-index: 2;
+}
+.second-section .container .text-pt2 .first-bloc-text::after {
+  font-family: "Commissioner";
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 5.5rem;
+  text-align: left;
+  position: absolute;
+  content: "01";
+  width: 100px;
+  height: 80px;
+  color: rgba(255, 255, 255, 0.3);
+  top: -43px;
+  left: -16px;
+  display: inline-block;
+  z-index: 0;
+}
+.second-section .container .text-pt2 .second-bloc-text {
+  position: relative;
+}
+.second-section .container .text-pt2 .second-bloc-text h2 {
+  position: relative;
+  z-index: 2;
+}
+.second-section .container .text-pt2 .second-bloc-text::after {
+  font-family: "Commissioner";
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 5.5rem;
+  text-align: left;
+  position: absolute;
+  content: "02";
+  width: 100px;
+  height: 80px;
+  color: rgba(255, 255, 255, 0.3);
+  top: -43px;
+  left: -16px;
+  display: inline-block;
+  z-index: 0;
+}
+.second-section .container .text-pt2 .third-bloc-text {
+  position: relative;
+}
+.second-section .container .text-pt2 .third-bloc-text h2 {
+  position: relative;
+  z-index: 2;
+}
+.second-section .container .text-pt2 .third-bloc-text::after {
+  font-family: "Commissioner";
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 5.5rem;
+  text-align: left;
+  position: absolute;
+  content: "03";
+  width: 100px;
+  height: 80px;
+  color: rgba(255, 255, 255, 0.3);
+  top: -43px;
+  left: -16px;
+  display: inline-block;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .second-section .container {
+    max-height: 1335px;
+    grid-template-columns: 42.96875vw 6.25vw 50.78125vw;
+    /*   grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-rows: 4.5fr 1fr 6.6fr;
+    grid-template-areas: "second-image second-image text-pt1" "second-image second-image text-pt2" "head-title-out text-pt2 text-pt2";
+  }
+  .second-section .container .second-image {
+    grid-area: 1/1/3/3;
+    width: 200%;
+    max-height: 658px;
+    z-index: 0;
+  }
+  .second-section .container .second-image img {
+    display: block;
+    object-fit: cover;
+    max-height: 658px;
+    width: 100%;
+    /* object-position: -215px -25px; */
+    object-position: -20vw -5vh;
+  }
+  .second-section .container .text-pt1 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    height: 538px;
+    width: 50.78125vw;
+    padding: 0 55px;
+    align-content: center;
+  }
+  .second-section .container .text-pt1 h1 {
+    width: 190px;
+    white-space: pre-line;
+  }
+  .second-section .container .text-pt1 h1::before {
+    position: absolute;
+    content: "";
+    background-image: url(img/~.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    top: 25px;
+    left: -80px;
+  }
+  .second-section .container .head-title-out {
+    display: inline-block;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    align-self: start;
+    margin-top: 140px;
+    width: 42vw;
+    max-height: 667px;
+  }
+  .second-section .container .head-title-out h1 {
+    margin-left: 45px;
+    font-family: "Commissioner";
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 2.5rem;
+    text-align: left;
+    font-size: 2rem;
+  }
+  .second-section .container .text-pt2 {
+    grid-column: 2/4;
+    grid-row: 2/4;
+    align-content: center;
+    justify-content: center;
+    width: 57vw;
+    max-height: 797px;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+  }
+  .second-section .container .text-pt2 .bloc {
+    margin-left: 58px;
+    margin-right: 38px;
+  }
+  .second-section .container .text-pt2 .first-bloc-text {
+    margin-top: 35px;
+  }
+  .second-section .container .text-pt2 .first-bloc-text h2 {
+    margin-bottom: 20px;
+  }
+  .second-section .container .text-pt2 .second-bloc-text h2 {
+    margin-bottom: 20px;
+  }
+  .second-section .container .text-pt2 .third-bloc-text h2 {
+    margin-bottom: 20px;
+  }
+  .second-section .container .text-pt2 .head-title-in {
+    display: none;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .second-section .container {
+    max-height: 130.83vw;
+    grid-template-columns: 37.8vw 13.19vw 48.96vw;
+  }
+  .second-section .container .second-image {
+    width: 200%;
+    max-height: 68.33vw;
+    z-index: 0;
+  }
+  .second-section .container .second-image img {
+    display: block;
+    object-fit: cover;
+    max-height: 68.33vw;
+    width: 100%;
+    object-position: -439.92px -125px;
+  }
+  .second-section .container .text-pt1 {
+    height: 54.45vw;
+    width: 48.96vw;
+    padding: 0;
+    margin: 0;
+    padding-left: 150px;
+  }
+  .second-section .container .text-pt1 h1 {
+    font-family: "Commissioner";
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 4rem;
+    text-align: left;
+    width: 30vw;
+    white-space: pre-line;
+  }
+  .second-section .container .text-pt1 h1::before {
+    width: 9.38vw;
+    height: 4.24vw;
+    top: 2.08vw;
+    left: -17.36vw;
+  }
+  .second-section .container .text-pt1 p {
+    font-family: "Commissioner";
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 2rem;
+    text-align: left;
+    width: 30.9vw;
+  }
+  .second-section .container .text-pt1 .red-span {
+    font-size: 1.125rem;
+  }
+  .second-section .container .head-title-out {
+    grid-columns: 1/-1;
+    margin-top: 180px;
+    width: 540px;
+    max-height: 62.5vw;
+  }
+  .second-section .container .head-title-out h1 {
+    margin-left: 45px;
+    font-family: "Commissioner";
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 4rem;
+    text-align: left;
+  }
+  .second-section .container .text-pt2 {
+    width: 62.15vw;
+    max-height: 76.38vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  .second-section .container .text-pt2 .bloc {
+    margin: 0;
+    justify-items: end;
+    padding-right: 130px;
+  }
+  .second-section .container .text-pt2 .bloc h2 {
+    font-family: "Commissioner";
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 2rem;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  .second-section .container .text-pt2 .bloc p {
+    font-family: "Commissioner";
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 2rem;
+    text-align: left;
+    max-width: 30.9vw;
+  }
+  .second-section .container .text-pt2 .first-bloc-text {
+    margin-top: 35px;
+  }
+  .second-section .container .text-pt2 .first-bloc-text h2 {
+    margin-bottom: 20px;
+  }
+  .second-section .container .text-pt2 .first-bloc-text::after {
+    width: 92px;
+    height: 88px;
+    left: -60px;
+  }
+  .second-section .container .text-pt2 .second-bloc-text {
+    margin: 100px 0;
+  }
+  .second-section .container .text-pt2 .second-bloc-text h2 {
+    margin-bottom: 20px;
+  }
+  .second-section .container .text-pt2 .second-bloc-text::after {
+    width: 92px;
+    height: 88px;
+    left: -60px;
+  }
+  .second-section .container .text-pt2 .third-bloc-text h2 {
+    margin-bottom: 20px;
+  }
+  .second-section .container .text-pt2 .third-bloc-text::after {
+    width: 92px;
+    height: 88px;
+    left: -60px;
+  }
+}/*# sourceMappingURL=style.css.map */
