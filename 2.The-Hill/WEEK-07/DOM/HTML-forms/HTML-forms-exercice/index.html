@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-forms-exercice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HTML FORMS</h1>
+        <form action="">
+            <div class="fullDiv">
+                <label for="gender">Gender: </label>
+                <select name="gender" id="gender">
+                    <option value="" disabled selected hidden>Select your gender</option>
+                    <option value="male">&#8594; Male</option>
+                    <option value="female">&#8594; Female</option>
+                    <option value="other">&#8594; Other</option>
+                </select>
+            </div>
+        <br>
+            <div class="fullDiv">
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username" placeholder="username" minlength="8" required>
+                <p class="msg"></p>
+            </div>
+        <br>
+            <div class="fullDiv">
+                <label for="email">Email: </label>
+                <input type="text" id="email" name="email" placeholder="your email" required>
+                <p class="msg"></p>
+            </div>
+        <br>
+            <div class="fullDiv">
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" placeholder="choose a password" minlength="8" required>
+                <p class="msg"></p>
+            </div>
+        <br>
+            <div class="fullDiv">
+                <label for="confirmation">Confirm password: </label>
+                <input type="password" id="confirmation" name="confirmation" placeholder="confirm your password" required>
+                <p class="msg"></p>
+            </div>
+        <br>
+            <div class="fullDiv">
+                <label for="birthday">Birthday: </label>
+
+                <input type="date" id="birthday" name="birthday" max="2010-10-17" required>
+            </div>
+        <br>
+            <div class="buttons">
+                <input id="submit" type="submit" value="submit">
+                <input id="reset" type="reset" value="reset">
+            </div>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
